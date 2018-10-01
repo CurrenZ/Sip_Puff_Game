@@ -37,6 +37,7 @@ void setup(){
 void draw(){
   background(55);
   current_mpxv = int(myString);
+  current_mpxv = int(map(current_mpxv, 1023, 0, 0, 1023));
   if (abs(current_mpxv - NOM) <= 50){
     myText = "Rest";
     sip_timer_0 = millis();
